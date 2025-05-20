@@ -30,7 +30,6 @@ function nextSequence() {
   //console.log(randomChosenColour);
 }
 
-
 $(".btn").on("click", function() {
     var userChosenColour = this.id;
     userClickedPattern.push(userChosenColour);
@@ -77,10 +76,6 @@ function startOver() {
   gamePattern = [];
   userClickedPattern = [];
 }
-
-
-
-
 
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
