@@ -4,29 +4,17 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).on("keydown", function () {
+function startGame() {
   if (started === false) {
     $("#level-title").text("Level " + level);
-    nextSequence();
+    setTimeout(nextSequence, 1000);
     started = true;
   }
-});
+}
 
-$(document).on("click", function () {
-  if (started === false) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
-
-$(document).on("touch", function () {
-  if (started === false) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+$(document).on("keydown", startGame);
+$(document).on("click", startGame);
+$(document).on("touch", startGame);
 
 function nextSequence() {
   userClickedPattern = [];
