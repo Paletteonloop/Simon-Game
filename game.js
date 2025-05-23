@@ -28,14 +28,6 @@ $(document).on("touch", function () {
   }
 });
 
-$(document).on("click", function () {
-  if (started === false) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
-
 function nextSequence() {
   userClickedPattern = [];
   level++;
@@ -56,11 +48,17 @@ function nextSequence() {
   //console.log(randomChosenColour);
 }
 
+<<<<<<< HEAD
 $(".btn").on("click", function () {
   var userChosenColour = this.id;
   userClickedPattern.push(userChosenColour);
 
   console.log("userPattern " + userClickedPattern);
+=======
+$(".btn").on("click", function() {
+    var userChosenColour = this.id;
+    userClickedPattern.push(userChosenColour);
+>>>>>>> 50213a44f91c9b183dfd5c511f6edc69722fedc6
 
   playSound(userChosenColour);
   animatePress(userChosenColour);
