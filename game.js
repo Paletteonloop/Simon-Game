@@ -3,6 +3,7 @@ var gamePattern = [];
 var userClickedPattern = [];
 var started = false;
 var level = 0;
+var bestScore = 0;
 
 function startGame() {
   if (started === false) {
@@ -51,6 +52,11 @@ $(".btn").on("click", function () {
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("success");
+
+    if (currentLevel > bestScore - 1) {
+      bestScore = currentLevel + 1;
+      $("#best-score").text("Best Score: " + bestScore);
+    }
 
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function () {
