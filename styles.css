@@ -53,11 +53,12 @@ body {
 
 @media (max-width: 1080px) {
   .btn {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
   }
+
   #level-title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .container {
