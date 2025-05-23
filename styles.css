@@ -51,7 +51,7 @@ body {
   background-color: grey;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
   .btn {
     height: 100px;
     width: 100px;
